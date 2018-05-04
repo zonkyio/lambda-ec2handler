@@ -105,9 +105,13 @@ resource "aws_cloudwatch_event_rule" "cloudwatch-ec2handler-terminate" {
 }
 PATTERN
 
-
 }
 
+resource "aws_cloudwatch_event_target" "lambda-ec2handler-terminate" {
+  rule      = "${aws_cloudwatch_event_rule.cloudwatch-ec2handler-terminate.name}"
+  target_id = "lambda-ec2handler-terminate"
+  arn       = "${aws_lambda_function.lambda-ec2handler-terminate.arn}"
+}
 
 
 
