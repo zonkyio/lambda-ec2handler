@@ -95,7 +95,7 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-		feel free to modify this part to fit script your use-case
+***REMOVED***
 
 ***REMOVED***
 ***REMOVED***
