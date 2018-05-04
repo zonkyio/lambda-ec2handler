@@ -11,25 +11,24 @@ When cloudWatch receives event "ec2 terminate" notify the lambda-ec2handler-term
 
 Script requirements
 -------------------
-python 3.6
-pip3
-boto3
-... Linux/BSD/OSX os to be able run make and installation by terraform
+  * python 3.6
+  * pip3
+  * boto3
+  * Linux/BSD/OSX os to be able run make and installation by terraform
 
 
 Instalation
 -----------
 this repo work as a terraform module and in example bellow you could see how to use it in your terraform environment. 
 
-  module "lambda-ec2handler" {
-    source = "../modules/lambda-ec2handler"
-
-    tags = {
-      Env = "devel",
-      Zone = "eu-central-1",
-      Terraform = "True",
-    }
-  } 
+    module "lambda-ec2handler" {
+      source = "../modules/lambda-ec2handler"
+      tags = {
+        Env = "devel",
+        Zone = "eu-central-1",
+        Terraform = "True",
+      }
+    } 
 
 
 Before run it as a module you should:
